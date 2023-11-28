@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mad Libs Game</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Day at the Zoo - Mid Lab Game</h1>
+        <form action="/generate-story" method="post">
+            <input type="text" name="animal" placeholder="Enter an animal" required>
+            <input type="text" name="adjective1" placeholder="Enter an adjective" required>
+            <input type="text" name="adjective2" placeholder="Enter another adjective" required>
+            <input type="text" name="adjective3" placeholder="Enter another adjective" required>
+            <input type="text" name="noun1" placeholder="Enter a noun" required>
+            <input type="text" name="noun2" placeholder="Enter another noun" required>
+            <input type="text" name="verb1" placeholder="Enter a verb" required>
+            <input type="text" name="sound" placeholder="Enter a sound" required>
+            <input type="text" name="food" placeholder="Enter a food" required>
+            <input type="text" name="color" placeholder="Enter a color" required>
+            <input type="text" name="hobby" placeholder="Enter a hobby" required>
+            <button type="submit">Generate Story</button>
+        </form>
+
+        <% if (story) { %>
+            <div id="story" class="story-content"><%= story %></div>
+            <img src="/images/story-image.jpg" alt="Story Image" class="story-image">
+        <% } %>
+    </div>
+</body>
+</html>
+ 
