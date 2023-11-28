@@ -52,11 +52,20 @@ button:hover {
     box-shadow: 0 0 8px rgba(0, 100, 0, 0.4);
 }
 
-.story-content, .story-image {
+.story-content{
     display: none;
     opacity: 0;
     transition: opacity 1s ease-in-out;
 }
+.story-image {
+    max-width: 100%;  /* Ensures image doesn't exceed container width */
+    max-height: 300px; /* You can adjust this value as needed */
+    object-fit: cover; /* Maintains aspect ratio */
+    margin: auto; /* Centers image if smaller than the container */
+    display: block; /* To replace display: none in your original CSS */
+    opacity: 1; /* To replace opacity: 0 in your original CSS */
+}
+
 
 .story-content.show, .story-image.show {
     display: block;
